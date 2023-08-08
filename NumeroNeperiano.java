@@ -5,30 +5,26 @@ class NumeroNeperiano {
 		Scanner scan = new Scanner(System.in);
 		
 		double aproximacoes = scan.nextDouble();
-		double div = 0, cont = 0, fatorial;
-		double termos;
-		double aprox = 0;
+		double cont, fatorial;
+		double termos = 0;
 		
-		while(cont != 0) {
-			fatorial = 
-		}
 		
-		for(int i = 1; i <= aproximacoes; i++) {
+		for(int i = 0; i < aproximacoes; i++) {
+			cont = i;
+			fatorial = cont;
 			
-			termos = 4/(div*(div+1)*(div+2));
-			if(i == 1) {
-				aprox = primTermo;
-			} else if(i > 1) {
-				if(i%2 == 0) {
-					aprox += termos;
-				}
-				else {
-					aprox -= termos;
+			if(cont == 1 || cont == 0) {
+				fatorial = 1;
+			} else {
+				while(cont > 1) { //4
+					fatorial = fatorial*(cont-1);
+					cont--;
 				}
 			}
-			System.out.printf("%.6f\n", aprox);
-			div += 2;
+			
+			termos += 1/fatorial;
 		}
+		System.out.printf("%.6f\n", termos);
 		
 		scan.close();
 	}
