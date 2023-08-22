@@ -12,13 +12,14 @@ class Sala {
     }
     
     String getDescricao() {
-        String ehAcessivel;
-        if(acessivel = false) {
-            ehAcessivel = "nao acessivel";
+        if(acessivel == false) {
+            return ("Bloco" + bloco + ", Sala " + sala + " (" + capacidade +
+        " lugares, não acessivel)");
         } else {
-            ehAcessivel = "acessivel";
+            return ("Bloco" + bloco + ", Sala " + sala + " (" + capacidade +
+        " lugares, acessivel)");
         }
-        return ("Bloco" + bloco + ", Sala " + sala + " (" + capacidade +
-        " lugares, " + ehAcessivel + ")");
+        /*return ("Bloco" + bloco + ", Sala " + sala + " (" + capacidade +
+        " lugares, " + ehAcessivel + ")");*/
     }
 }
